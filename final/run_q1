@@ -1,1 +1,1 @@
- 
+ python3 q1.py $MR_OPT --jobconf mapred.reduce.tasks=4 hdfs:///ds410/facebook --output-dir hdfs:///user/axr402/results --no-output
