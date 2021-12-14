@@ -8,7 +8,7 @@ class q1(MRJob):
             neighbors = 0
             if i(1) > 1000:
                 neighbors += 1
-                yield(i, neeighbors)
+                yield(i, neighbors)
                 
     def reducer(self, key, total):
          yield key, sum(total) > 5
