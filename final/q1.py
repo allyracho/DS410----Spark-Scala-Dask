@@ -11,7 +11,7 @@ class q1(MRJob):
                 yield(i, neighbors)
                 
     def reducer(self, key, total):
-         yield key, sum(total) > 5
+         yield (key, (sum(total) > 5))
   
 
 	
