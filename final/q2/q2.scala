@@ -5,7 +5,7 @@ import org.apache.spark.SparkContext._
 
 object Q3{
      def main(args: Array[String]) = {
-          val conf = new SparkConf().setAppName("q3")
+          val conf = new SparkConf().setAppName("q2")
           val sc = new SparkContext(conf)
           val fb = sc.textFile("hdfs:///ds410/facebook").map{x => x.split("\t")}
           val kvrdd = fb.map{x => (x(0).toInt, x(1).toInt.filter(_ > 1000))}
