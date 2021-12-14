@@ -8,7 +8,7 @@ object Q2{
           val conf = new SparkConf().setAppName("q2")
           val sc = new SparkContext(conf)
           val fb = sc.textFile("hdfs:///ds410/facebook").map{x => x.split("\t")}
-          val kvrdd = fb.map{x => (x(0).toInt, x(1).toInt))}
+          val kvrdd = fb.map{x => (x(0), x(1).toInt))}
           val grouped = kvrdd.groupByKey
           val filtered = grouped.map{i => (i._1, i._2.filter(_ > 1000))}
           val counts = filtered.map{i => (i._1, i._2.size)}
