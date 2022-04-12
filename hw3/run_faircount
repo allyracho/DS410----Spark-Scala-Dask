@@ -1,3 +1,1 @@
-# fill this in to run faircount.py
-# remember that no output should be printed to screen. instead, it should
-# go in a directory called faircount (not /faircount) in hdfs
+python3 faircount.py $MR_OPT --jobconf mapred.reduce.tasks=4 hdfs:///ds410/warandpeace --output-dir hdfs:///user/axr402/faircount --no-output
