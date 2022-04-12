@@ -1,4 +1,2 @@
-# put your code for running retail.py here.
-# remember to make sure that the output does not get printed to screen
-# and the output should be placed in a directory called retailresults (not /retailresults)
-# 
+
+python3 retail.py $MR_OPT --jobconf mapred.reduce.tasks=4 hdfs:///ds410/retaildata --output-dir hdfs:///user/axr402/retailresults --no-output
