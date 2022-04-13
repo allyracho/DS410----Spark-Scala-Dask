@@ -1,0 +1,2 @@
+always use git from
+the command line!
